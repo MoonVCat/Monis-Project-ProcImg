@@ -183,6 +183,16 @@ namespace Procesamiento.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap stop_circle_regular_241 {
+            get {
+                object obj = ResourceManager.GetObject("stop-circle-regular-241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap video_off_regular_240 {
             get {
                 object obj = ResourceManager.GetObject("video-off-regular-240", resourceCulture);

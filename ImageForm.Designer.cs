@@ -67,7 +67,7 @@ namespace Procesamiento
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSave.BackColor = System.Drawing.Color.CadetBlue;
             this.btnSave.Image = global::Procesamiento.Properties.Resources.save_regular_24;
             this.btnSave.Location = new System.Drawing.Point(20, 395);
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
@@ -79,7 +79,7 @@ namespace Procesamiento
             // 
             // btnUpload
             // 
-            this.btnUpload.BackColor = System.Drawing.Color.CadetBlue;
+            this.btnUpload.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnUpload.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnUpload.Image = global::Procesamiento.Properties.Resources.image_add_regular_24;
             this.btnUpload.Location = new System.Drawing.Point(20, 157);

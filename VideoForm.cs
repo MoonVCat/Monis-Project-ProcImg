@@ -66,6 +66,7 @@ namespace Procesamiento
         private async void ReadAllFrames()
         {
             actualFrame = 0;
+            
             while (isRendering && actualFrame < framesQuantity)
             {
                 actualFrame += 1;
@@ -113,7 +114,9 @@ namespace Procesamiento
                     pbVideo.Image = filter.ToBitmap();
                     await Task.Delay(1000 / Convert.ToInt32(fps));
                 }
+
             }
+                
         }
 
         private void btnPlay_Click(object sender, EventArgs e)
@@ -141,5 +144,22 @@ namespace Procesamiento
         {
 
         }
+
+        private void btnScreenShot_Click(object sender, EventArgs e)
+        {
+            //GUARDAR VIDEO
+
+            Bitmap video = new Bitmap(pbVideo.Image);
+
+            SaveFileDialog GuardarImg = new SaveFileDialog();
+            GuardarImg.Filter = "JPG(.JPG)|.jpg";
+
+
+            if (GuardarImg.ShowDialog() == DialogResult.OK)
+            {
+                video.Save(GuardarImg.FileName);
+            }
+        }
+
     }
 }

@@ -34,6 +34,7 @@ namespace Procesamiento
             this.btnAddVideo = new System.Windows.Forms.Button();
             this.pbVideo = new System.Windows.Forms.PictureBox();
             this.panelImageButtons = new System.Windows.Forms.Panel();
+            this.btnScreenShot = new System.Windows.Forms.Button();
             this.pbLogos = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbVideo)).BeginInit();
             this.panelImageButtons.SuspendLayout();
@@ -54,7 +55,7 @@ namespace Procesamiento
             // 
             this.btnPlay.BackColor = System.Drawing.Color.CadetBlue;
             this.btnPlay.Image = global::Procesamiento.Properties.Resources.play_regular_24;
-            this.btnPlay.Location = new System.Drawing.Point(11, 446);
+            this.btnPlay.Location = new System.Drawing.Point(760, 373);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(2);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(82, 46);
@@ -91,8 +92,8 @@ namespace Procesamiento
             // 
             this.panelImageButtons.AutoScroll = true;
             this.panelImageButtons.BackColor = System.Drawing.Color.LightCoral;
+            this.panelImageButtons.Controls.Add(this.btnScreenShot);
             this.panelImageButtons.Controls.Add(this.pbLogos);
-            this.panelImageButtons.Controls.Add(this.btnPlay);
             this.panelImageButtons.Controls.Add(this.btnAddVideo);
             this.panelImageButtons.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelImageButtons.Location = new System.Drawing.Point(0, 0);
@@ -100,6 +101,19 @@ namespace Procesamiento
             this.panelImageButtons.Name = "panelImageButtons";
             this.panelImageButtons.Size = new System.Drawing.Size(114, 528);
             this.panelImageButtons.TabIndex = 7;
+            // 
+            // btnScreenShot
+            // 
+            this.btnScreenShot.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnScreenShot.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnScreenShot.Image = global::Procesamiento.Properties.Resources.image_add_regular_24;
+            this.btnScreenShot.Location = new System.Drawing.Point(11, 374);
+            this.btnScreenShot.Margin = new System.Windows.Forms.Padding(2);
+            this.btnScreenShot.Name = "btnScreenShot";
+            this.btnScreenShot.Size = new System.Drawing.Size(82, 45);
+            this.btnScreenShot.TabIndex = 7;
+            this.btnScreenShot.UseVisualStyleBackColor = false;
+            this.btnScreenShot.Click += new System.EventHandler(this.btnScreenShot_Click);
             // 
             // pbLogos
             // 
@@ -121,6 +135,7 @@ namespace Procesamiento
             this.ClientSize = new System.Drawing.Size(938, 528);
             this.Controls.Add(this.panelImageButtons);
             this.Controls.Add(this.cbFilters);
+            this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.pbVideo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -141,5 +156,6 @@ namespace Procesamiento
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Panel panelImageButtons;
         private System.Windows.Forms.PictureBox pbLogos;
+        private System.Windows.Forms.Button btnScreenShot;
     }
 }

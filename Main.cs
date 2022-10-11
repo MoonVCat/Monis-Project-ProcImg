@@ -46,6 +46,7 @@ namespace Procesamiento
             btnFilterVideo.BackColor = Design.PANEL_SUB_BUTTON;
 
             btnMovementDetection.BackColor = Design.PANEL_BUTTON;
+            btnManualUsuario.BackColor = Design.PANEL_BUTTON;
         }
 
         #endregion
@@ -83,6 +84,21 @@ namespace Procesamiento
             }
 
             openChildForm(new DetectionForm());
+        }
+
+        private void btnManualUsuario_Click(object sender, EventArgs e)
+        {
+
+            refreshColors();
+            panelSubMenuFilters.Visible = false; // Escondo el submenú de filtros.
+
+            if (btnManualUsuario.BackColor == Design.PANEL_BUTTON)
+            {
+                btnManualUsuario.BackColor = Design.CHOSEN_BUTTON;
+            }
+
+            openChildForm(new ManualUsuario());
+
         }
 
         #endregion
@@ -123,9 +139,6 @@ namespace Procesamiento
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

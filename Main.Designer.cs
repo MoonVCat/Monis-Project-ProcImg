@@ -38,6 +38,7 @@ namespace Procesamiento
             this.btnFilters = new System.Windows.Forms.Button();
             this.panelAppName = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.btnManualUsuario = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbBigLogos = new System.Windows.Forms.PictureBox();
             this.pbLogos = new System.Windows.Forms.PictureBox();
@@ -54,6 +55,7 @@ namespace Procesamiento
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.LightCoral;
+            this.panelSideMenu.Controls.Add(this.btnManualUsuario);
             this.panelSideMenu.Controls.Add(this.btnExit);
             this.panelSideMenu.Controls.Add(this.btnMovementDetection);
             this.panelSideMenu.Controls.Add(this.panelSubMenuFilters);
@@ -190,6 +192,24 @@ namespace Procesamiento
             this.panelChildForm.Size = new System.Drawing.Size(937, 528);
             this.panelChildForm.TabIndex = 1;
             // 
+            // btnManualUsuario
+            // 
+            this.btnManualUsuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManualUsuario.FlatAppearance.BorderSize = 0;
+            this.btnManualUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManualUsuario.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManualUsuario.ForeColor = System.Drawing.Color.AliceBlue;
+            this.btnManualUsuario.Location = new System.Drawing.Point(0, 269);
+            this.btnManualUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.btnManualUsuario.Name = "btnManualUsuario";
+            this.btnManualUsuario.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnManualUsuario.Size = new System.Drawing.Size(188, 37);
+            this.btnManualUsuario.TabIndex = 6;
+            this.btnManualUsuario.Text = "Manual de Usuario";
+            this.btnManualUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManualUsuario.UseVisualStyleBackColor = true;
+            this.btnManualUsuario.Click += new System.EventHandler(this.btnManualUsuario_Click);
+            // 
             // panel1
             // 
             this.panel1.BackgroundImage = global::Procesamiento.Properties.Resources.gatitos;
@@ -267,6 +287,7 @@ namespace Procesamiento
         private System.Windows.Forms.PictureBox pbLogos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pbBigLogos;
+        private System.Windows.Forms.Button btnManualUsuario;
     }
 }
 
