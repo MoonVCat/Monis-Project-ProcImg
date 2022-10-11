@@ -40,8 +40,8 @@ namespace Procesamiento
             else
             {
                 MessageBox.Show("No se encontró ninguna WebCam.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //this.Close(); // si no hay webcam, mando mensaje de error
-                this.Dispose();
+                this.Close(); // si no hay webcam, mando mensaje de error
+                
             }
 
         }
