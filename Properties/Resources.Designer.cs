@@ -93,6 +93,16 @@ namespace Procesamiento.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Deteccion_MU {
+            get {
+                object obj = ResourceManager.GetObject("Deteccion_MU", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gatitos {
             get {
                 object obj = ResourceManager.GetObject("gatitos", resourceCulture);
@@ -106,6 +116,16 @@ namespace Procesamiento.Properties {
         internal static System.Drawing.Bitmap image_add_regular_24 {
             get {
                 object obj = ResourceManager.GetObject("image-add-regular-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Imagen_MU {
+            get {
+                object obj = ResourceManager.GetObject("Imagen_MU", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

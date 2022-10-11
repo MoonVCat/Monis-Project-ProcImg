@@ -133,14 +133,17 @@
   <data name="welcome" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\welcome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="logos_cut1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logos_cut1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="webcam-solid-241" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\webcam-solid-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="video-plus-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\video-plus-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="camera-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\camera-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="camera-off-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camera-off-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image-add-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image-add-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,28 +151,31 @@
   <data name="logos_cut" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logos_cut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="camera-off-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\camera-off-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="gatitos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gatitos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="stop-circle-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stop-circle-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="camera-regular-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camera-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="camera-off-regular-240" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\camera-off-regular-240.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Imagen_MU" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Imagen_MU.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="photo-album-regular-240" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\photo-album-regular-240.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logos_cut1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logos_cut1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="stop-circle-regular-241" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stop-circle-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="webcam-solid-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\webcam-solid-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stop-circle-regular-241" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stop-circle-regular-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Deteccion_MU" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Deteccion_MU.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
