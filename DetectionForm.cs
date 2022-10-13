@@ -53,7 +53,7 @@ namespace Procesamiento
                 webcam = new VideoCaptureDevice(myWebcams[cbWebcams.SelectedIndex].MonikerString); // Utilizo la webcam que seleccioné en el combobox
                 webcam.NewFrame += recording; // Operación rara que funciona para que vaya funcionando en tiempo real
                 webcam.Start(); // Inicio la cámara 
-                pbWebcam.SizeMode = PictureBoxSizeMode.StretchImage; // Acoplar la webcam a mi Picture Box
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage; // Acoplar la webcam a mi Picture Box
                 btnWebCam.Image = new Bitmap(Procesamiento.Properties.Resources.stop_circle_regular_24); // Cambio el ícono del botón para activar la cámara al ícono de desactivar 
             }
             else
@@ -61,9 +61,9 @@ namespace Procesamiento
                 webcam.SignalToStop();
                 //webcam.Stop(); // Detengo la cámara
                 webcam = null;
-                pbWebcam.Image = new Bitmap(Procesamiento.Properties.Resources.video_off_regular_240); //cambio la imagen del picture box
+                pictureBox1.Image = new Bitmap(Procesamiento.Properties.Resources.camera_off_regular_240); //cambio la imagen del picture box
                 btnWebCam.Image = new Bitmap(Procesamiento.Properties.Resources.webcam_solid_24); // cambio la imagen del botón
-                pbWebcam.SizeMode = PictureBoxSizeMode.CenterImage;
+                pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             }
         }
 
@@ -111,7 +111,7 @@ namespace Procesamiento
                 }
             }
 
-            pbWebcam.Image = bmp; // Asignamos el bmp al Picture Box
+            pictureBox1.Image = bmp; // Asignamos el bmp al Picture Box
 
             labelPeople.Invoke(new Action(() => // si no hago esto me sale error D: 
             {

@@ -32,12 +32,12 @@ namespace Procesamiento
             this.cbWebcams = new System.Windows.Forms.ComboBox();
             this.labelPeople = new System.Windows.Forms.Label();
             this.btnWebCam = new System.Windows.Forms.Button();
-            this.pbWebcam = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblText = new System.Windows.Forms.Label();
             this.panelImageButtons = new System.Windows.Forms.Panel();
             this.pbLogos = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbWebcam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelImageButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,11 +81,11 @@ namespace Procesamiento
             // 
             // pbWebcam
             // 
-            this.pbWebcam.Location = new System.Drawing.Point(0, 0);
-            this.pbWebcam.Name = "pbWebcam";
-            this.pbWebcam.Size = new System.Drawing.Size(100, 50);
-            this.pbWebcam.TabIndex = 9;
-            this.pbWebcam.TabStop = false;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pbWebcam";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // lblText
             // 
@@ -151,13 +151,13 @@ namespace Procesamiento
             this.Controls.Add(this.lblText);
             this.Controls.Add(this.labelPeople);
             this.Controls.Add(this.cbWebcams);
-            this.Controls.Add(this.pbWebcam);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DetectionForm";
             this.Text = "DetectionForm";
             this.Load += new System.EventHandler(this.DetectionForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbWebcam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelImageButtons.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -168,7 +168,6 @@ namespace Procesamiento
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pbWebcam;
         private System.Windows.Forms.ComboBox cbWebcams;
         private System.Windows.Forms.Button btnWebCam;
         private System.Windows.Forms.Label labelPeople;
