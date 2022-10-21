@@ -32,12 +32,10 @@ namespace Procesamiento
             this.cbWebcams = new System.Windows.Forms.ComboBox();
             this.labelPeople = new System.Windows.Forms.Label();
             this.btnWebCam = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblText = new System.Windows.Forms.Label();
             this.panelImageButtons = new System.Windows.Forms.Panel();
             this.pbLogos = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelImageButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();

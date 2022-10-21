@@ -76,7 +76,7 @@ namespace Procesamiento
         private void btnMovementDetection_Click(object sender, EventArgs e)
         {
             refreshColors();
-            panelSubMenuFilters.Visible = false; // Escondo el submenú de filtros.
+            panelSubMenuFilters.Visible = false; 
 
             if (btnMovementDetection.BackColor == Design.PANEL_BUTTON)
             {
@@ -90,7 +90,7 @@ namespace Procesamiento
         {
 
             refreshColors();
-            panelSubMenuFilters.Visible = false; // Escondo el submenú de filtros.
+            panelSubMenuFilters.Visible = false; 
 
             if (btnManualUsuario.BackColor == Design.PANEL_BUTTON)
             {

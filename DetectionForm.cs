@@ -29,13 +29,13 @@ namespace Procesamiento
 
         private void loadWebcams()
         {
-            myWebcams = new FilterInfoCollection(FilterCategory.VideoInputDevice); // Cargo todos los dispositivos de video conectados a mi computadora
+            myWebcams = new FilterInfoCollection(FilterCategory.VideoInputDevice); 
 
             if (myWebcams.Count > 0)
             {
                 foreach (FilterInfo filterInfo in myWebcams)
-                    cbWebcams.Items.Add(filterInfo.Name); // Agrega la lista de webcams a mi combobox
-                cbWebcams.SelectedIndex = 0; // selecciono el index como 0
+                    cbWebcams.Items.Add(filterInfo.Name); 
+                cbWebcams.SelectedIndex = 0; 
             }
             else
             {
@@ -48,29 +48,29 @@ namespace Procesamiento
 
         private void btnWebCam_Click(object sender, EventArgs e)
         {
-            if (webcam == null) // Condicional que funciona para encender y apagar la cámara
+            if (webcam == null) 
             {
-                webcam = new VideoCaptureDevice(myWebcams[cbWebcams.SelectedIndex].MonikerString); // Utilizo la webcam que seleccioné en el combobox
-                webcam.NewFrame += recording; // Operación rara que funciona para que vaya funcionando en tiempo real
+                webcam = new VideoCaptureDevice(myWebcams[cbWebcams.SelectedIndex].MonikerString); 
+                webcam.NewFrame += recording; 
                 webcam.Start(); // Inicio la cámara 
-                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage; // Acoplar la webcam a mi Picture Box
-                btnWebCam.Image = new Bitmap(Procesamiento.Properties.Resources.stop_circle_regular_24); // Cambio el ícono del botón para activar la cámara al ícono de desactivar 
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                btnWebCam.Image = new Bitmap(Procesamiento.Properties.Resources.stop_circle_regular_24); 
             }
             else
             {
                 webcam.SignalToStop();
                 //webcam.Stop(); // Detengo la cámara
                 webcam = null;
-                pictureBox1.Image = new Bitmap(Procesamiento.Properties.Resources.camera_off_regular_240); //cambio la imagen del picture box
-                btnWebCam.Image = new Bitmap(Procesamiento.Properties.Resources.webcam_solid_24); // cambio la imagen del botón
+                pictureBox1.Image = new Bitmap(Procesamiento.Properties.Resources.camera_off_regular_240); 
+                btnWebCam.Image = new Bitmap(Procesamiento.Properties.Resources.webcam_solid_24); 
                 pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             }
         }
 
         private void recording(object sender, NewFrameEventArgs eventArgs)
         {
-            Bitmap bmp = (Bitmap)eventArgs.Frame.Clone(); // No recuerdo qué hace pero aquí entra muchas veces mientras la cámara está encendida
-            Image<Bgr, byte> grayImage = new Image<Bgr, byte>(bmp);  // Dibujamos el rectángulo sobre el Bitmap y desplegamos el bitman en el Picture Box
+            Bitmap bmp = (Bitmap)eventArgs.Frame.Clone(); 
+            Image<Bgr, byte> grayImage = new Image<Bgr, byte>(bmp);  
             Rectangle[] rectangles = cascadeClassifier.DetectMultiScale(grayImage, 1.2, 1); // Mi array de rectángulos
             int people = 0;
             Color rectangleColour;
@@ -101,7 +101,7 @@ namespace Procesamiento
                         break;
                 }
 
-                using (Graphics graphics = Graphics.FromImage(bmp)) // Me sirve para poder dibujar sobre mi imagen
+                using (Graphics graphics = Graphics.FromImage(bmp)) 
                 {
 
                     using (Pen pen = new Pen(rectangleColour, 1)) // Dibujaré el rectángulo con una pluma color rojo de ancho 1
@@ -111,9 +111,9 @@ namespace Procesamiento
                 }
             }
 
-            pictureBox1.Image = bmp; // Asignamos el bmp al Picture Box
+            pictureBox1.Image = bmp; 
 
-            labelPeople.Invoke(new Action(() => // si no hago esto me sale error D: 
+            labelPeople.Invoke(new Action(() => 
             {
                 labelPeople.Text = people.ToString(); // Imprimo la cantidad de personas en pantalla aquí mero
             }));

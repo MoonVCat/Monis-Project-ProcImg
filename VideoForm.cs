@@ -39,7 +39,7 @@ namespace Procesamiento
         {
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyVideos); // El path default lo defino como el escritorio
-            openFile.Title = "Selecciona un video"; // El título de mi ventana
+            openFile.Title = "Selecciona un video";
             openFile.Filter = "All Media Files (*.mp4)|*.mp4|All files (*.*)|*.*"; // De esta forma solo se pueden seleccionar videos y gifs
 
             if (isRendering || videoCapture != null)
@@ -128,9 +128,9 @@ namespace Procesamiento
         private void loadFilters()
         {
             for (int i = 0; i < filterName.Length; i++) // Ciclo para guardar todos mis filtros en el combobox
-                cbFilters.Items.Add(filterName[i]); // Agrega la lista de filtros a mi combobox
+                cbFilters.Items.Add(filterName[i]); 
 
-            cbFilters.SelectedIndex = 0; // selecciono el index como 0
+            cbFilters.SelectedIndex = 0; 
         }
 
 

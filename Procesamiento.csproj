@@ -114,6 +114,12 @@
       <DependentUpon>DetectionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Filters.cs" />
+    <Compile Include="Histograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Histograma.Designer.cs">
+      <DependentUpon>Histograma.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManualUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </Compile>
     <EmbeddedResource Include="DetectionForm.resx">
       <DependentUpon>DetectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Histograma.resx">
+      <DependentUpon>Histograma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImageForm.resx">
       <DependentUpon>ImageForm.cs</DependentUpon>

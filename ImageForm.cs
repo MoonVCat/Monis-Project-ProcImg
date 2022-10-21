@@ -19,6 +19,10 @@ namespace Procesamiento
         private Bitmap bmp = null;
         private Bitmap bmpOriginal = null;
         private String[] filterName = { "Normal", "Grayscale", "Sepia", "Negative", "Blur", "Black and White", "Mirror", "Noise" };
+        private int[] histograma = new int[256];
+        private int[] Rhistograma = new int[256];
+        private int[] Ghistograma = new int[256];
+        private int[] Bhistograma = new int[256];
 
         public ImageForm()
         {
@@ -46,8 +50,6 @@ namespace Procesamiento
             }
 
         }
-
-
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -145,6 +147,171 @@ namespace Procesamiento
 
         private void pbFilterImage_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btn_HistogramaBN_Click(object sender, EventArgs e)
+        {
+
+            //Histograma BLANCO Y NEGRO
+            int x = 0;
+            int y = 0;
+            Bitmap foto = new Bitmap(bmpOriginal.Width, bmpOriginal.Height);
+            Color rColor = new Color();
+            Color ocolor = new Color();
+            float g;
+            for (x = 0; x < bmpOriginal.Width; x++)
+            {
+                for (y = 0; y < bmpOriginal.Height; y++)
+                {
+                    ocolor = bmpOriginal.GetPixel(x, y);
+                    g = ocolor.R * 0.299f + ocolor.G * 0.587f + ocolor.B * 0.114f;
+                    rColor = Color.FromArgb((int)g, (int)g, (int)g);
+                    foto.SetPixel(x, y, rColor);
+                }
+            }
+            pbFilterImage.Image = foto;
+
+            for (x = 0; x < bmpOriginal.Width; x++)
+            {
+                for (y = 0; y < bmpOriginal.Height; y++)
+                {
+                    //obtenemos el color del pixel
+
+                    rColor = bmpOriginal.GetPixel(x, y);
+                    histograma[rColor.R]++;
+                }
+
+            }
+
+            Histograma hform = new Histograma(histograma);
+            hform.Show();
+
+        }
+
+        private void btn_HistogramaVerde_Click(object sender, EventArgs e)
+        {
+
+            //Histograma VERDE
+            int x = 0;
+            int y = 0;
+            Bitmap foto = new Bitmap(bmpOriginal.Width, bmpOriginal.Height);
+            Color rColor = new Color();
+            Color ocolor = new Color();
+
+            for (x = 0; x < bmpOriginal.Width; x++)
+            {
+                for (y = 0; y < bmpOriginal.Height; y++)
+                {
+                    //obtenemos el color del pixel
+                    ocolor = bmpOriginal.GetPixel(x, y);
+
+                    //procesamos el nuevo color
+                    rColor = Color.FromArgb(0, ocolor.G, 0);
+
+                    //colocamos el color resultante
+                    foto.SetPixel(x, y, rColor);
+                }
+            }
+            pbFilterImage.Image = foto;
+
+            for (x = 0; x < bmpOriginal.Width; x++)
+            {
+                for (y = 0; y < bmpOriginal.Height; y++)
+                {
+                    //obtenemos el color del pixel
+
+                    rColor = bmpOriginal.GetPixel(x, y);
+                    Ghistograma[rColor.B]++;
+                }
+            }
+
+            Histograma hform = new Histograma(Ghistograma);
+            hform.Show();
+
+        }
+
+        private void btn_HistogramaRojo_Click(object sender, EventArgs e)
+        {
+
+            //Histograma ROJO
+            int x = 0;
+            int y = 0;
+            Bitmap foto = new Bitmap(bmpOriginal.Width, bmpOriginal.Height);
+            Color rColor = new Color();
+            Color ocolor = new Color();
+
+
+            for (x = 0; x < bmpOriginal.Width; x++)
+            {
+                for (y = 0; y < bmpOriginal.Height; y++)
+                {
+                    //obtenemos el color del pixel
+                    ocolor = bmpOriginal.GetPixel(x, y);
+
+                    //procesamos el nuevo color
+                    rColor = Color.FromArgb(ocolor.R, 0, 0);
+
+                    //colocamos el color resultante
+                    foto.SetPixel(x, y, rColor);
+                }
+            }
+            pbFilterImage.Image = foto;
+
+            for (x = 0; x < bmpOriginal.Width; x++)
+            {
+                for (y = 0; y < bmpOriginal.Height; y++)
+                {
+                    //obtenemos el color del pixel
+
+                    rColor = bmpOriginal.GetPixel(x, y);
+                    Rhistograma[rColor.G]++;
+                }
+            }
+
+            Histograma hform = new Histograma(Rhistograma);
+            hform.Show();
+
+        }
+
+        private void btn_HistogramaAzul_Click(object sender, EventArgs e)
+        {
+            //Histograma AZUL
+            int x = 0;
+            int y = 0;
+            Bitmap foto = new Bitmap(bmpOriginal.Width, bmpOriginal.Height);
+            Color rColor = new Color();
+            Color ocolor = new Color();
+
+            for (x = 0; x < bmpOriginal.Width; x++)
+            {
+                for (y = 0; y < bmpOriginal.Height; y++)
+                {
+                    //obtenemos el color del pixel
+                    ocolor = bmpOriginal.GetPixel(x, y);
+
+                    //procesamos el nuevo color
+                    rColor = Color.FromArgb(0, 0, ocolor.B);
+
+                    //colocamos el color resultante
+                    foto.SetPixel(x, y, rColor);
+                }
+            }
+            pbFilterImage.Image = foto;
+
+            for (x = 0; x < bmpOriginal.Width; x++)
+            {
+                for (y = 0; y < bmpOriginal.Height; y++)
+                {
+                    //obtenemos el color del pixel
+
+                    rColor = bmpOriginal.GetPixel(x, y);
+                    Bhistograma[rColor.R]++;
+                }
+            }
+
+            Histograma hform = new Histograma(Bhistograma);
+            hform.Show();
 
         }
     }
