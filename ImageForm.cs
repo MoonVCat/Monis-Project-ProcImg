@@ -181,17 +181,14 @@ namespace Procesamiento
                     rColor = bmpOriginal.GetPixel(x, y);
                     histograma[rColor.R]++;
                 }
-
             }
 
             Histograma hform = new Histograma(histograma);
             hform.Show();
-
         }
 
         private void btn_HistogramaVerde_Click(object sender, EventArgs e)
         {
-
             //Histograma VERDE
             int x = 0;
             int y = 0;
@@ -228,12 +225,10 @@ namespace Procesamiento
 
             Histograma hform = new Histograma(Ghistograma);
             hform.Show();
-
         }
 
         private void btn_HistogramaRojo_Click(object sender, EventArgs e)
         {
-
             //Histograma ROJO
             int x = 0;
             int y = 0;
@@ -241,18 +236,14 @@ namespace Procesamiento
             Color rColor = new Color();
             Color ocolor = new Color();
 
-
             for (x = 0; x < bmpOriginal.Width; x++)
             {
                 for (y = 0; y < bmpOriginal.Height; y++)
                 {
-                    //obtenemos el color del pixel
                     ocolor = bmpOriginal.GetPixel(x, y);
 
-                    //procesamos el nuevo color
                     rColor = Color.FromArgb(ocolor.R, 0, 0);
 
-                    //colocamos el color resultante
                     foto.SetPixel(x, y, rColor);
                 }
             }
@@ -262,7 +253,6 @@ namespace Procesamiento
             {
                 for (y = 0; y < bmpOriginal.Height; y++)
                 {
-                    //obtenemos el color del pixel
 
                     rColor = bmpOriginal.GetPixel(x, y);
                     Rhistograma[rColor.G]++;
@@ -271,7 +261,6 @@ namespace Procesamiento
 
             Histograma hform = new Histograma(Rhistograma);
             hform.Show();
-
         }
 
         private void btn_HistogramaAzul_Click(object sender, EventArgs e)
@@ -287,13 +276,10 @@ namespace Procesamiento
             {
                 for (y = 0; y < bmpOriginal.Height; y++)
                 {
-                    //obtenemos el color del pixel
                     ocolor = bmpOriginal.GetPixel(x, y);
 
-                    //procesamos el nuevo color
                     rColor = Color.FromArgb(0, 0, ocolor.B);
 
-                    //colocamos el color resultante
                     foto.SetPixel(x, y, rColor);
                 }
             }
@@ -303,7 +289,6 @@ namespace Procesamiento
             {
                 for (y = 0; y < bmpOriginal.Height; y++)
                 {
-                    //obtenemos el color del pixel
 
                     rColor = bmpOriginal.GetPixel(x, y);
                     Bhistograma[rColor.R]++;
@@ -312,7 +297,6 @@ namespace Procesamiento
 
             Histograma hform = new Histograma(Bhistograma);
             hform.Show();
-
         }
     }
 }
